@@ -33,10 +33,10 @@ void menu() {
     int a = 1;
     while (a > 0) {
         printf("Wybierz program: \n"
-                         "1 - zadanie 1\n"
-                         "2 - zadanie 2\n"
-                         "3 - zadanie 3\n"
-                         "4 - zadanie 4\n"
+                         "1 - zadanie 1 (tabliczka mnozenia\n"
+                         "2 - zadanie 2 (suma cyfr liczby)\n"
+                         "3 - zadanie 3 (NWD/NWW)\n"
+                         "4 - zadanie 4 (sumy szeregow)\n"
                          "0 - zakoncz program\n");
         scanf("%d", &a );
         switch (a) {
@@ -51,6 +51,7 @@ void menu() {
                 break;
             case 4:
             	zadanie4();// zadanie 4
+            	break;
             case 0:
                 printf("Wybrano koniec programu!");
                 break;
@@ -120,7 +121,7 @@ void zadanie3() {
 	printf("\nb= ");
 	scanf("%d", &b);
 	printf("\nNajwiekszy wspolny dzielnik to: %d", nwd(a,b));
-	printf("\nNajmniejsza wspolna wielokrotnosc to: %d\n", nww(a,b));	
+	printf("\nNajmniejsza wspolna wielokrotnosc to: %d\n\n", nww(a,b));	
 	
 }
 void zadanie4() {
@@ -147,7 +148,7 @@ void zadanie4() {
 		S2 += skladnik;
 	}
 	printf("\nS1 = %.10lf", S1);
-	printf("\nS2 = %.10lf\n", S2);	
+	printf("\nS2 = %.10lf\n\n", S2);	
 }
 
 int nwd(int a, int b) {
